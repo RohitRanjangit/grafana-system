@@ -1,9 +1,11 @@
-# SYSTEM STATUS DASHBOARD #
-Used Python3.8 to populate the influxDB database named **system**, ``psutil`` library for get the
+# SYSTEM STATUS DASHBOARD
+
+Used Python3.8 to populate the influxDB database named **system**, ``psutil`` python library to get the
 system informations.
 
 The sample code can be shown here:
-```
+
+```python
 from datetime import date, datetime
 from time import sleep
 from influxdb import InfluxDBClient
@@ -43,7 +45,8 @@ while True:
     client.write_points(get_points())
     sleep(1)
 ```
-The Python code will create two measurements named *cpu*, *ram*. Also, it keeps updating the
+
+This Python API will create two measurements named *cpu*, *ram*. Also, it keeps updating the
 status of cpu, ram(usage in %) every 1s.
 
 The sample snapshot of grafana dashboard is here:
@@ -53,7 +56,8 @@ The `grafana-server` will create alerts on the basis of RAM/CPU usage. If RAM/CP
 then it'll send a alert through mail. A snapshot of **cpu-alert** is shown here:
 ![Screenshot](alert.png)
 
-## How to run ##
+## How to run
+
 Step1:
 Run grafana-server:
 
@@ -90,8 +94,3 @@ On the terminal run the following command(*It'll lead to ram usage of 3gb*):
 `stress --vm 1 --vm-bytes 3G --vm-keep -t 20s`
 
 Change the `3G` to other value depending on your system to reach 80% usage.
-
-
-
-
-
