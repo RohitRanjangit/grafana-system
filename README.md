@@ -79,6 +79,8 @@ On the terminal run:
 Visit to the (https://localhost:3000) to see the dashboard, 
 you have to import the json file from [system.json](SYSTEM.json).
 
+On **grafana** setup datasource to *influxDB* and database to *system*.
+
 **To get an alert**
 
 *--get an cpu alert*
