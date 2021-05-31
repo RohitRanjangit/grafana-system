@@ -77,7 +77,7 @@ On the terminal run:
 `python3 populate.py`
 
 Visit to the (https://localhost:3000) to see the dashboard, 
-you have to import the json file from [system.json](system.json).
+you have to import the json file from [system.json](SYSTEM.json).
 
 **To get an alert**
 
